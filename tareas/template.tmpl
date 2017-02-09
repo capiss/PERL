@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PASSWD</title>
+</head>
+<body>
+  <tmpl_loop name=hash2>
+    <div>
+      <fieldset>
+        <legend><tmpl_var name="user"></legend>
+          <label for="user">USER</label>
+          <input type="text" readonly value="<tmpl_var name=user>" placeholder='User' name="user"> <br>
+          <label for="password">USER</label>
+          <input type="text" readonly value="<tmpl_var name=pass>" placeholder='PASSWORD' name="password"> <br>
+          <label for="UID">UID</label>
+          <input type="text" readonly value="<tmpl_var name=uid>" placeholder='UID' name="UID"> <br>
+          <label for="gid">GID</label>
+          <input type="text" readonly value="<tmpl_var name=gid>" placeholder='gid' name="gid"> <br>
+          <label for="desc">Descripción</label>
+          <input type="text" readonly value="<tmpl_var name=desc>" placeholder='desc' name="desc"> <br>
+          <label for="home">Home</label>
+          <input type="text" readonly value="<tmpl_var name=home>" placeholder='home' name="home"> <br>
+          <label for="shell">Shell</label>
+          <input type="text" readonly value="<tmpl_var name=shell>" placeholder='shell' name="shell"> <br>
+        </fieldset>
+    </div>
+  </tmpl_loop>
+</body>
+</html>

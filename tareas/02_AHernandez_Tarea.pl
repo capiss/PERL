@@ -43,6 +43,11 @@ while(<FCG>){
     #print $1,"\n";
     print FOU $1,"\n"
   }
+  if(/(https?:\/\/[w]{3}\.[^\s]*\/)/){
+    push(@urls,$1);
+    #print $1,"\n";
+    print FOU $1,"\n"
+  }
   if(/([a-zA-Z0-9i|\.|-|_]*@[a-zA-Z0-9|\.|-|_]*\.[a-zA-Z]{2,4})/){
     push(@emails,$1);
     #print $1,"\n";
@@ -57,9 +62,9 @@ while(<FCG>){
     #print $2,"\n";
     print FOD $2,"\n"
   }
-  if(/([w]{3}\.)([a-zA-Z0-9|-|_|\.]*\.[a-zA-Z]{2,4})/){
-    push(@domains,$2);
-    #print $2,"\n";
+  if(/(https?:\/\/)([w]{3}\.)([a-zA-Z0-9|-|_|\.]*\.[a-zA-Z]{2,4})/){
+    push(@domains,$3);
+    #print $3,"\n";
     print FOD $2,"\n"
   }
 
