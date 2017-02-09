@@ -2,6 +2,12 @@
 use warnings;
 use strict;
 use HTML::Template;
+=head Plantilla Tarea 3
+=item
+  Generar plantilla para el archivo passwd.
+  Armando Hernández Hernández.
+=cut
+
 my $num_args = @ARGV;
 if ($num_args != 1) {
  print "Necesita una ruta del archivo psswd como parametro\n";
@@ -12,6 +18,10 @@ print FHTML &showPass($ARGV[0]);
 close FHTML;
 #`firefox index.html`;
 
+=item
+ Subrutina Obtiene datos, recibe como parametro la ruta del archivo a leer.
+ regresa la referencia del arreglo que contiene las referencias de los datos.
+=cut
 sub obtieneDatos{
   my $filename=$_[0];
   open FILE,"<",$filename;
@@ -39,7 +49,10 @@ sub obtieneDatos{
   close FILE;
   return \@info;
 }
-
+=item
+  Subrutina showPass, recibe como parametro la ruta del archivo,
+  regresa la salida del template html.
+=cut
 sub showPass{
   my $output; 
   my $template = HTML::Template->new(filename => './template.tmpl');
