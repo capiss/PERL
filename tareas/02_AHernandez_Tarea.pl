@@ -2,7 +2,7 @@
 use warnings;
 use strict;
 use 5.014;
-=head1 Tarea de conicidencias con url
+=head1 Tarea de conicidencias con url.
 =head2 PERL
 =item
  Busca coincidencias de el archivo datos.txt y las arroja en el
